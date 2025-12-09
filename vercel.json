@@ -1,6 +1,10 @@
 {
-  "buildCommand": "cd project && pnpm install && pnpm run build",
+  "buildCommand": "npm --prefix project install && npm --prefix project run build",
   "outputDirectory": "project/dist",
-  "installCommand": "pnpm install",
-  "framework": "vite"
+  "git": {
+    "deploymentEnabled": {
+      "master": true,
+      "development": true
+    }
+  }
 }
